@@ -1,0 +1,810 @@
+
+/* =========================
+   GENERAL RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.38)),
+        url("https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1920&q=90");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #222;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    width: 100%;
+    min-height: 85px;
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.88);
+    position: relative;
+    z-index: 100;
+}
+
+.logo {
+    color: #fff !important;
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 30px;
+    margin-left: auto;
+}
+
+.nav-links a {
+    color: #fff !important;
+    text-decoration: none !important;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 0;
+    transition: 0.3s ease;
+}
+
+.nav-links a:visited {
+    color: #fff !important;
+}
+
+.nav-links a:hover {
+    color: #ffc107 !important;
+    transform: translateY(-2px);
+}
+
+/* PROFILE PAGE NAVBAR SPACING */
+
+.profile-nav-links {
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 30px !important;
+    margin-left: auto;
+}
+
+.profile-nav-links a {
+    display: inline-block;
+    margin: 0 !important;
+    padding: 10px 0;
+    color: #fff !important;
+    text-decoration: none !important;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.profile-nav-links a:visited {
+    color: #fff !important;
+}
+
+.profile-nav-links a:hover {
+    color: #ffc107 !important;
+}
+
+/* ALSO SUPPORTS PROFILE LINKS DIRECTLY INSIDE NAVBAR */
+
+.navbar > a:not(.logo) {
+    display: inline-block;
+    margin-left: 30px !important;
+    color: #fff !important;
+    text-decoration: none !important;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.navbar > a:not(.logo):hover {
+    color: #ffc107 !important;
+}
+
+/* =========================
+   SITE HEADING
+========================= */
+
+.site-heading {
+    color: white;
+    text-align: center;
+    font-size: 32px;
+    padding: 20px;
+    text-shadow: 2px 2px 5px black;
+}
+
+/* =========================
+   HOME PAGE
+========================= */
+
+.home-container {
+    width: 90%;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.hero {
+    width: 100%;
+    margin: 65px auto 0;
+    padding: 55px 25px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.65);
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(5px);
+}
+
+.hero h1 {
+    color: #fff !important;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 18px;
+    text-shadow: 2px 2px 6px black;
+}
+
+.hero p {
+    color: #fff !important;
+    font-size: 20px;
+    line-height: 1.7;
+    text-shadow: 1px 1px 5px black;
+}
+
+.hero .btn {
+    display: inline-block;
+    margin: 25px 10px 0;
+    padding: 13px 28px;
+    background: #3498db;
+    color: white !important;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero .btn:hover {
+    background: #217dbb;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   COMMON CARD
+========================= */
+
+.card {
+    width: 100%;
+    padding: 30px;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.25);
+}
+
+.card h2 {
+    color: #222;
+    font-size: 27px;
+    margin-bottom: 18px;
+}
+
+.card p {
+    color: #333;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* =========================
+   COMMON CONTAINER
+========================= */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+/* =========================
+   LOGIN AND REGISTER FORMS
+========================= */
+
+.form-box {
+    width: 92%;
+    max-width: 690px;
+    margin: 45px auto 40px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.94);
+    border: 2px solid rgba(35, 35, 35, 0.3);
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(7px);
+}
+
+.form-box h2 {
+    text-align: center;
+    color: #111;
+    font-size: 30px;
+    margin-bottom: 28px;
+}
+
+.form-box label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #111;
+}
+
+.form-box input,
+.form-box select,
+.form-box textarea {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border: 1px solid #aaa;
+    border-radius: 7px;
+    background: white;
+    font-size: 16px;
+    outline: none;
+}
+
+.form-box input:focus,
+.form-box select:focus,
+.form-box textarea:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+.form-box button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 30px;
+    background: #3498db;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-box button:hover {
+    background: #217dbb;
+}
+
+.form-box p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.form-box p a {
+    color: #075b91;
+    font-weight: bold;
+}
+
+/* =========================
+   ERROR AND SUCCESS
+========================= */
+
+.error-message {
+    color: #b00020;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.success-message {
+    color: #176b35;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* =========================
+   FOOD LIST PAGE
+========================= */
+
+.food-container {
+    width: 94%;
+    max-width: 1400px;
+    margin: 35px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.food-heading {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.food-heading h1 {
+    color: #263b50;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.food-heading p {
+    color: #555;
+    font-size: 16px;
+}
+
+/* ADD FOOD BUTTON AREA */
+
+.food-toolbar {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+}
+
+/* SEARCH FORM */
+
+.search-form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0 25px;
+    padding: 18px;
+    background: #f1f5f9;
+    border: 1px solid #dce3eb;
+    border-radius: 12px;
+}
+
+.search-form input {
+    flex: 1;
+    min-width: 150px;
+    height: 48px;
+    padding: 12px 16px;
+    border: 1px solid #b8c5d1;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-form input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+/* FOOD TABLE */
+
+.food-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 10px;
+}
+
+.food-table {
+    width: 100%;
+    min-width: 850px;
+    border-collapse: collapse;
+    background: white;
+}
+
+.food-table th,
+.food-table td {
+    padding: 15px 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+    font-size: 15px;
+    color: #222;
+    vertical-align: middle;
+}
+
+.food-table th {
+    background: #263b50;
+    color: white;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+.food-table tbody tr:nth-child(even) {
+    background: #f5f8fb;
+}
+
+.food-table tbody tr:hover {
+    background: #eaf4fc;
+}
+
+/* FOOD ACTIONS */
+
+.food-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.food-actions form {
+    margin: 0;
+}
+
+.food-actions .btn {
+    padding: 8px 12px;
+    font-size: 13px;
+}
+
+/* EMPTY FOOD MESSAGE */
+
+.empty-food-card {
+    text-align: center;
+    padding: 45px 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+}
+
+.empty-food-card h2 {
+    color: #263b50;
+    margin-bottom: 12px;
+}
+
+.empty-food-card p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn,
+button {
+    display: inline-block;
+    padding: 11px 19px;
+    border: none;
+    border-radius: 7px;
+    text-decoration: none !important;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-primary {
+    background: #3498db;
+    color: white !important;
+}
+
+.btn-primary:hover {
+    background: #217dbb;
+    color: white !important;
+}
+
+.btn-secondary {
+    background: #263b50;
+    color: white !important;
+}
+
+.btn-secondary:hover {
+    background: #172b3e;
+    color: white !important;
+}
+
+.btn-edit {
+    background: #f39c12;
+    color: white !important;
+}
+
+.btn-edit:hover {
+    background: #d98208;
+}
+
+.btn-delete {
+    background: #dc3545;
+    color: white !important;
+}
+
+.btn-delete:hover {
+    background: #b52a37;
+}
+
+.btn-blue {
+    background: #3498db;
+    color: white !important;
+}
+
+/* =========================
+   ADMIN DASHBOARD
+========================= */
+
+.admin-page {
+    min-height: 100vh;
+}
+
+.admin-welcome {
+    width: 90%;
+    max-width: 1200px;
+    margin: 45px auto 25px;
+    padding: 30px 25px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.admin-welcome h1 {
+    color: white !important;
+    font-size: 36px;
+    margin-bottom: 12px;
+    text-shadow: 2px 2px 5px black;
+}
+
+.admin-welcome p {
+    color: white;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.admin-dashboard {
+    width: 90%;
+    max-width: 1200px;
+    margin: 25px auto 40px;
+    padding: 40px 35px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.admin-dashboard h2 {
+    color: #263b50;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.dashboard-description {
+    color: #444;
+    font-size: 18px;
+    margin-bottom: 35px;
+    line-height: 1.6;
+}
+
+.admin-actions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.admin-action-card {
+    display: block;
+    padding: 30px 20px;
+    text-align: center;
+    text-decoration: none !important;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+}
+
+.admin-action-card:hover {
+    transform: translateY(-7px);
+    border-color: #3498db;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+}
+
+.admin-icon {
+    display: inline-flex;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 18px;
+    background: #3498db;
+    color: white;
+    border-radius: 50%;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.admin-action-card h3 {
+    color: #263b50;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.admin-action-card p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    text-align: center;
+    color: white;
+    padding: 25px;
+    margin-top: 40px;
+    font-size: 17px;
+    text-shadow: 1px 1px 5px black;
+}
+
+.admin-page .footer {
+    margin-top: 25px;
+    padding-bottom: 30px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 1100px) {
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .nav-links,
+    .profile-nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px !important;
+        margin-left: 0;
+    }
+
+    .navbar > a:not(.logo) {
+        margin: 0 12px !important;
+    }
+
+    .hero {
+        margin-top: 40px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 850px) {
+    .admin-actions {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .admin-welcome h1 {
+        font-size: 30px;
+    }
+
+    .food-container {
+        width: 96%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo {
+        font-size: 23px;
+    }
+
+    .nav-links,
+    .profile-nav-links {
+        gap: 15px !important;
+    }
+
+    .nav-links a,
+    .profile-nav-links a {
+        font-size: 14px;
+    }
+
+    .home-container {
+        width: 94%;
+    }
+
+    .hero {
+        margin-top: 25px;
+        padding: 30px 15px;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .card {
+        padding: 22px 15px;
+    }
+
+    .form-box {
+        margin-top: 30px;
+        padding: 25px 20px;
+    }
+
+    .form-box h2 {
+        font-size: 25px;
+    }
+
+    .admin-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-dashboard {
+        padding: 25px 18px;
+    }
+
+    .admin-welcome {
+        margin-top: 25px;
+        padding: 25px 15px;
+    }
+
+    .admin-welcome h1 {
+        font-size: 26px;
+    }
+
+    .admin-dashboard h2 {
+        font-size: 25px;
+    }
+
+    .search-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-form input,
+    .search-form .btn {
+        width: 100%;
+    }
+
+    .food-toolbar {
+        justify-content: center;
+    }
+
+    .food-heading h1 {
+        font-size: 25px;
+    }
+}
+
+/* Force Profile Navbar Links to White */
+.navbar a,
+.navbar a:link,
+.navbar a:visited,
+.navbar a:active,
+.profile-nav-links a,
+.profile-nav-links a:link,
+.profile-nav-links a:visited,
+.profile-nav-links a:active {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-weight: bold;
+    display: inline-block;
+    margin-left: 25px;
+}
+
+/* Hover Effect */
+.navbar a:hover,
+.profile-nav-links a:hover {
+    color: #ffc107 !important;
+}
